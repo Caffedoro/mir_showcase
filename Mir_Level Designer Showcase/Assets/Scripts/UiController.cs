@@ -17,12 +17,21 @@ public class UiController : MonoBehaviour
     public void PressP(InputAction.CallbackContext context){
 
         Debug.Log($"NikolasMir");
-    
+        if(textObject1 != null)
+        {
+            textObject1.SetActive(!textObject1.activeSelf);
+        }
+        
     }
 
     public void PressO(InputAction.CallbackContext context){
 
         Debug.Log($"ShowGoals");
+        
+        if (textObject2 != null)
+        {
+            textObject2.SetActive(!textObject2.activeSelf);
+        }
     }
     // Update is called once per frame
     void Update()
