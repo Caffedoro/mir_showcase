@@ -4,7 +4,7 @@ using System.Collections;
 
 public class Player : MonoBehaviour
 {
-
+    [SerializeField] private Transform _ptrans;
    public float Speed = 2f;
     public float jumpHeight = 2f;
    public float gravity = -9f;
@@ -23,6 +23,7 @@ public class Player : MonoBehaviour
     {
         controller = GetComponent<CharacterController>();
    //     _rb = GetComponent<Rigidbody>(); 
+       // _P = GameObject.Find("Player");
     }
  
  public void OnMove(InputAction.CallbackContext context){
@@ -44,8 +45,23 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       Vector3 move = new Vector3(moveInput.x, 0, moveInput.y);
-       controller.Move(move * Speed * Time.deltaTime);
+
+        Vector3 forward = _ptrans.forward;
+
+        Vector3 right = _ptrans.right;
+
+        forward.y = 0f;
+
+        right.y = 0f;
+
+        forward.Normalize();
+        right.Normalize();  
+
+        Vector3 moveDirection = forward * moveInput.y + right * moveInput.x;
+        controller.Move(moveDirection * Speed * Time.deltaTime);
+
+        //Vector3 move = new Vector3(moveInput.x, 0, moveInput.y);
+        //  controller.Move( move * Speed * Time.deltaTime);
 
         velocity.y += gravity * Time.deltaTime;
         controller.Move(velocity * Time.deltaTime);
