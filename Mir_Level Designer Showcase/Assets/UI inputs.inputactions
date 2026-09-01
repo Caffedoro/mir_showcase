@@ -1,0 +1,55 @@
+{
+    "version": 1,
+    "name": "UI inputs",
+    "maps": [
+        {
+            "name": "UI Stuff",
+            "id": "e659feee-128e-4ea2-ad64-437238d2c535",
+            "actions": [
+                {
+                    "name": "P",
+                    "type": "Button",
+                    "id": "ab7c4d5d-8d9f-4bb6-849f-f35eeb79d23b",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "O",
+                    "type": "Button",
+                    "id": "4f588a8b-0d1d-4b2e-991c-351418642a4c",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "1fde7ea8-ee8d-4156-b114-df1de2bf5bc7",
+                    "path": "<Keyboard>/p",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "P",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "90c6091c-e3cf-401e-8ea0-4ebe27e6be41",
+                    "path": "<Keyboard>/o",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "O",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
