@@ -12,6 +12,7 @@ public class Player : MonoBehaviour
    public float rotateSpeed = 7f;
 
    private CharacterController controller; 
+  // private Rigidbody _rb;
    private Vector3 velocity;
    private Vector2 moveInput;
    private Vector2 rotateInput;
@@ -21,6 +22,7 @@ public class Player : MonoBehaviour
       void Start()
     {
         controller = GetComponent<CharacterController>();
+   //     _rb = GetComponent<Rigidbody>(); 
     }
  
  public void OnMove(InputAction.CallbackContext context){
@@ -56,6 +58,7 @@ public class Player : MonoBehaviour
 public void OnLook(InputAction.CallbackContext context){
   rotateInput = context.ReadValue<Vector2>();
   Debug.Log($"rotate input: {rotateInput}");
+
 }
     void FixedUpdate(){
       
