@@ -14,7 +14,7 @@ public class LevelClear : MonoBehaviour
     {
         Debug.Log("Level Cleared!");
         // Add logic to handle level clear, such as loading the next level or displaying a message
-        SceneManager.LoadScene("Hard Mode");
+        SceneManager.LoadScene("HardMode");
     }
 
     // Update is called once per frame
